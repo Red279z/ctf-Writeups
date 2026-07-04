@@ -1,0 +1,32 @@
+URL Room https://tryhackme.com/room/missingperson
+
+TryHackMe: Missing Person Walkthrough / Writeup
+Hey everyone! Today I’m breaking down my solution for the Missing Person room on TryHackMe. This room is a great hands-on exercise focused on Open Source Intelligence (OSINT) and digital forensics.
+Here is a step-by-step walkthrough of how I solved it.
+
+Step 1: Initial Recon & Website Inspection
+After deploying the machine and navigating to the provided IP/URL, we are greeted with a website dedicated to finding a missing person named John Doe.
+I started by exploring the site, reading the background text, and looking at the available images. Usually, in OSINT challenges, the clues are hidden right in plain sight or embedded in the media assets.
+
+Step 2: Image Analysis (Metadata Extraction)
+The next logical step was to check if the images on the site contained any hidden metadata (EXIF data).
+1. I downloaded the images from the website to my local machine.
+2. I ran Exiftool on the images to inspect their metadata.
+3. Looking through the output of one of the specific images, I hit a breakthrough. In the description/comment field, there was a hidden social media username/handle associated with the missing person: [Insert the username here, e.g., @johndoe_osint].
+
+Step 3: Social Media Hunting
+Armed with the username, I pivoted to OSINT mode and started searching for this handle across popular platforms (like Twitter/X, GitHub, or Instagram).
+• I located the target's profile.
+• I began auditing their posts, replies, and bio. When doing OSINT, even the smallest details like a date, a location tag, or a background detail in a photo can be the key.
+• One of the posts contained a vital clue/link that pointed directly to where the missing person might be or what they were doing.
+
+Step 4: Finding the Flags
+• Flag 1: This was found directly embedded within one of the early posts/tweets after carefully reading through the timeline.
+• Flag 2: This required looking closer at either the profile bio or checking the metadata/text of a secondary link shared by the account.
+Step 5: Final Flag & Room Completion
+By connecting the final dots—which involved pinpointing a specific location, coordinate, or a hidden string mentioned in the target's final digital footprints—I managed to piece together the final answer and submit it to complete the room 100%.
+
+
+Key Takeaways:
+• This room is a textbook example of how vital metadata inspection is in OSINT.
+• Always cross-reference usernames across different platforms.
